@@ -94,20 +94,24 @@
           <div class="row">    
             <br>
             <div class="col-md-2 col-sm-3 text-center">
-              <a class="story-title" href="/authors/<%=i%>"><img alt="" src="/images/<%=authors[i].img%>" style="width:100px;height:100px" class="img-circle"></a>
+              <a class="story-title" href="/authors/<%=i%>"><img alt="" src="/uploads/authoruploads/<%=authors[i].image%>" style="width:100px;height:100px" class="img-circle"></a>
             </div>
             <div class="col-md-10 col-sm-9">
-              <h3><%=authors[i].author%></h3>
+              <h3><%=authors[i].name%></h3>
               <div class="row">
                 <div class="col-xs-9">
-                  <h4><span class="label label-default"><%=authors[i].details%></span></h4><h4>
-                  <!-- <small style="font-family:courier,'new courier';" class="text-muted"><%=authors[i].genre%>
-                  </small> -->
-                            <a href="/authors/<%=i%>" class="text-muted">
-                                              Read More</a>
+                  <h4><span class="label label-default"><%=authors[i].description%></span></h4><h4>
+                  <small style="font-family:courier,'new courier';" class="text-muted"><%=authors[i].works%>
+                  
+                            <a href="/authors/<%=authors[i]._id%>" class="text-muted">
+                                              Read More</a></small>
                   </h4></div>
                 <div class="col-xs-3"></div>
               </div>
+              <td >  <a href="/authors/updateauthor/<%=authors[i]._id%>" style="margin-left: 30px;" class="btn btn-primary pull-right btnNext">update </a> </td>
+                 
+              <td >  <a href="/authors/delete/<%=authors[i]._id%>" class="btn btn-primary pull-right btnNext"> delete</a></td>
+              
               <br><br>
             </div>
           </div>

@@ -27,13 +27,15 @@
     </div>
     <nav class="collapse navbar-collapse" role="navigation">
       <ul class="nav navbar-nav">
-       <%for(i=0;i<nav.length;i++){%>
+        <%for(i=0;i<nav.length;i++){%>
         <li>
           <a href="<%=nav[i].link%>"><%=nav[i].name%></a>
         </li>
        <%}%>
       </ul>
       <ul class="nav navbar-right navbar-nav">
+        
+            
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-search"></i></a>
           <ul class="dropdown-menu" style="padding:12px;">
@@ -44,6 +46,7 @@
         </li>
       </ul>
     </nav>
+  
   </div>
 </header>
 
@@ -86,15 +89,12 @@
       
       <div class="panel">
         <div class="panel-body">
-          
-          
-          
           <!--/stories-->
           <%for(i=0;i<books.length;i++){%>
           <div class="row">    
             <br>
             <div class="col-md-2 col-sm-3 text-center">
-              <a class="story-title" href="/books/<%=i%>"><img alt="" src="/images/<%=books[i].img%>" style="width:100px;height:100px" class="img-circle"></a>
+              <a class="story-title" href="/books/<%=i%>"><img alt=""  src="/uploads/bookuploads/<%=books[i].image%>" style="width:100px;height:100px" class="img-circle"></a>
             </div>
             <div class="col-md-10 col-sm-9">
               <h3><%=books[i].title%></h3>
@@ -102,19 +102,31 @@
                 <div class="col-xs-9">
                   <h4><span class="label label-default"><%=books[i].author%></span></h4><h4>
                   <small style="font-family:courier,'new courier';" class="text-muted"><%=books[i].genre%>
-                            <a href="/books/<%=i%>" class="text-muted">
+                            <a href="/books/<%=books[i]._id%>" class="text-muted">
                                               Read More</a></small>
-                  </h4></div>
+                  </h4>
+                  <td >  <a href="/books/updatebook/<%=books[i]._id%>" style="margin-left: 30px;" class="btn btn-primary pull-right btnNext">update </a> </td>
+                 
+                 <td >  <a href="/books/delete/<%=books[i]._id%>" class="btn btn-primary pull-right btnNext"> delete</a></td>
+                 
+                </div>
+                 
+                  <!-- <a href="/admin/<%=books[i]._id%>" class="text-muted">
+                    <button type="submit">Update</button></a>  -->
+                    
+                    <!-- <button type="submit" onsubmit="">Update</button><br> -->
+
+                  <br><br>
+                      <!-- <button type="submit">Delete</button><br> -->
                 <div class="col-xs-3"></div>
               </div>
               <br><br>
+              
+
             </div>
           </div>
           <%}%>
           <hr>
-          
-
-          
           
           <!--/stories-->
           

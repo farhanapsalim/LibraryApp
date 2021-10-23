@@ -91,12 +91,12 @@
           
           <!--/stories-->
           <div class="row">    
-            <form method="GET" action="/adminAddAuthor/add">
-             Name:  <input type="text" required name="title"> <br>
+            <form method="POST" action="/adminAddAuthor/add" enctype="multipart/form-data">
+             Author Name:  <input type="text" required name="name"> <br>
              <br>
-             Description:  <input type="text" required name="author"><br>
+             Description:  <input type="text" required name="description"><br>
              <br>
-             Works:  <input type="text" required name="genre"><br>
+             Works:  <input type="text" required name="works"><br>
              <br>
              Image:  <input type="file" required name="image"><br>
              <br>

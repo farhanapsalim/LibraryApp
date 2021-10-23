@@ -24,15 +24,17 @@ const nav = [
    }
 
 ];
-
-
 const booksRouter=require('./src/routes/bookRoutes')(nav);
+
+//const booksRouter=require('./src/routes/bookRoutes')(nav);
 const adminRouter=require('./src/routes/adminRoutes')(nav);
 const authorRouter=require('./src/routes/authorRoutes')(nav);
 const adminAddAuthorRouter=require('./src/routes/adminAddAuthorRoutes')(nav);
 const signinRouter=require('./src/routes/signinRoutes')(nav);
 const signupRouter=require('./src/routes/signupRouter')(nav);
 
+
+app.use(express.urlencoded({extended:true}));
 app.use(express.static('./public'))
 app.set('view engine','ejs');
 app.set('views',__dirname+'/src/views');

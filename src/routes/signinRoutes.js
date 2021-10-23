@@ -18,7 +18,8 @@ signinRouter.get('/',function(req,res)
 })
 signinRouter.get('/add',function(req,res)
 {
-  res.send("you are successfully logged in");  
+   res.redirect("/books");
+//   res.redirect("you are successfully logged in");  
 })
 
 return signinRouter;

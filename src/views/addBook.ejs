@@ -91,14 +91,14 @@
           
           <!--/stories-->
           <div class="row">    
-            <form method="GET" action="/admin/add">
+            <form method="POST" action="/admin/add" enctype="multipart/form-data">
              Title:  <input type="text" required name="title"> <br>
              <br>
-             Author:  <input type="text" required name="author"><br>
+             Author:  <input type="text"   required name="author"><br>
              <br>
-             Genre:  <input type="text" required name="genre"><br>
+             Genre:  <input type="text"  required name="genre"><br>
              <br>
-             Image:  <input type="file" required name="image"><br>
+             Image:  <input type="file"  required  name="image"><br>
              <br>
             <button type="submit">Add Book</button><br>
             </form>
